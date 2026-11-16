@@ -1,13 +1,31 @@
-# Figma Make and Code Layers files
+# ANTIDOT — Kyiv streetwear storefront
 
-This directory contains scripts, configuration, and generated files that Figma
-Make and Code Layers use to install dependencies, run your app, build previews,
-and publish your site.
+The repository contains a small React + TypeScript storefront built with Vite. The app files live in the repository root (not in `src/`).
 
-Commit this directory to your repository so Figma Make and Code Layers can reuse
-it the next time this repository is imported and start your preview server right
-away, without setting up the project from scratch.
+## Run locally
 
-To learn more about these files, see
-[Use Git with Figma Make and code layers](https://help.figma.com/hc/en-us/articles/44220165255063-Use-Git-with-Figma-Make-and-code-layers#h_01M5X47F86RN1RW0F8565KZHB8)
-in the Figma Help Center.
+Requirements: Node.js 22.12+ and pnpm 10.34.3 (or a recent Corepack-enabled Node installation).
+
+```bash
+corepack enable
+corepack prepare pnpm@10.34.3 --activate
+pnpm install
+pnpm dev
+```
+
+Open <http://localhost:5173>. Keep the terminal open while using the site; stop the server with `Ctrl+C`.
+
+If Corepack is unavailable, install pnpm with `npm install -g pnpm@10.34.3`, then run `pnpm install` and `pnpm dev`.
+
+## Build and preview
+
+```bash
+pnpm build
+pnpm preview
+```
+
+The production-ready static site is generated in `dist/`; the preview is available at <http://localhost:4173>.
+
+## Important note about checkout
+
+The cart and checkout are a front-end demonstration. Cart and last-order data are saved in this browser's local storage; orders are not sent to a store, payment processor, or delivery service. Connect a backend/payment provider before accepting real orders.
