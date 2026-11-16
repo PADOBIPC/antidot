@@ -1,0 +1,10 @@
+{
+  "description": "Shop limited-edition Kyiv streetwear, choose sizes, and place orders with flexible delivery and payment options in Ukrainian or English.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}
